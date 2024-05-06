@@ -1,2 +1,4 @@
 ^sanofi\.templates\.Rproj$
 ^\.Rproj\.user$
+^tmpl\.Rproj$
+^LICENSE\.md$

@@ -1,0 +1,18 @@
+.github: workflows
+data:
+- source
+- derived
+deliv:
+- figures
+- models
+- reports
+- presentations
+- tables
+references:
+- literature
+- presentations
+- reports
+script:
+- analysis/report
+- analysis/slides
+- pipelines

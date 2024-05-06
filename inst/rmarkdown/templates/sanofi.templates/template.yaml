@@ -1,0 +1,5 @@
+name: Sanofi Themed Presentation
+description: >
+  Create a themed presentation using the sanofi.templates package, to make a
+  xaringan presentation using sanofi logos and colour scheme.
+create_dir: false

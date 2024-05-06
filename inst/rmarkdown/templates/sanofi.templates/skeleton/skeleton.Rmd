@@ -1,0 +1,68 @@
+---
+title: "Slides Title"
+subtitle: "Slides Subtitle"  
+author: 
+  - "Author Name"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: ["resources/css/header.css", "xaringan-themer.css"]
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+      titleSlideClass: ['title-slide']
+    seal: false
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = FALSE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+```{r}
+library(xaringanthemer)
+library(sanofi.templates)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  header_color = '#000000',
+  inverse_header_color = "#FFFFFF",
+  title_slide_background_color = "#FFFFFF",
+  title_slide_background_image = get_file('title','image'),
+  title_slide_background_position = "right",
+  title_slide_background_size = 'contain'
+  
+)
+
+```
+
+class: title-slide   
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author`
+
+### `r Sys.Date()`
+
+---
+
+
