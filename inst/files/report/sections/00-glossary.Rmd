@@ -1,0 +1,39 @@
+
+# List of Abbreviations {-}
+
+```{r, echo=FALSE, eval = knitr::load_cache('acronyms', 'acronym_tbl', notfound = FALSE)}
+
+cached <- knitr::load_cache('acronyms', 'acronym_tbl')
+
+gloss <- cached |>
+  glossary_to_table()
+
+if(!is.null(gloss)){
+  glss <- gloss |>
+  dplyr::arrange(name)
+  
+  table_col_headers <- c('Abbreviation or specialist term',
+                       'Explanation')
+
+if(knitr::opts_knit$get("rmarkdown.pandoc.to")=='docx'){
+  gloss |>
+    flextable::flextable() |>
+    flextable::set_header_labels(
+      values = list(
+        name = table_col_headers[1],
+        description = table_col_headers[2])
+    ) |>
+    flextable::autofit()
+}else{
+  gloss |> 
+    knitr::kable(
+      col.names = table_col_headers,
+      booktabs = TRUE
+    )
+}
+  
+}else{
+  'No Table of Abbreviations Found'
+}
+
+```

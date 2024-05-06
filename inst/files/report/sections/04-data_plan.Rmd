@@ -1,0 +1,20 @@
+# Data Plan
+
+## Data Plan for Analysis
+
+### Analysis Population
+
+Patients in the analysis population for this ER analysis in all patients that finished screening phase.
+
+### Covariates
+
+Subject level demographic and baseline covariates were included in the ER dataset. 
+The baseline level covariates to be included in the dataset were as follows: Gender, Age Group, Weight, baseline disease burden.
+
+### Analysis Variables
+
+The metric used to asses the disease was XXX score.
+
+### Data Imputation
+
+Explain imputation scheme

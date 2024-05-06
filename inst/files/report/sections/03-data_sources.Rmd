@@ -1,0 +1,19 @@
+# Study Design and Description
+
+## Study Design
+
+Describe the study designated
+
+Example:
+
+XXX-123 is a Phase 3, open-label, 1-year study of the safety, tolerability, and need for re-treatment with `r gls('drug')` in adult subjects with disease XYZ. Approximately NNN subjects will be dosed, with the expectation to achieve follow-up of 300 subjects for 6 months and 100 subjects for 1 year.
+
+Patients are designated to three cohorts:
+
+-   Low Dose: Description
+-   Dose Switching: Description
+-   High Dose: Description
+
+Dosing schedule
+
+Followup schedule

@@ -1,0 +1,35 @@
+definitions:
+- entry: drug
+  name: DRUG
+  description: Treatment
+acronyms:
+- entry: soc
+  label: SOC
+  long: Standard of Care
+- entry: dur
+  label: DUR
+  long: durability of response
+- entry: tte
+  label: TTE
+  long: time to event
+- entry: pk
+  label: PK
+  long: pharmacokinetics
+- entry: bmi
+  label: BMI
+  long: Body Mass Index
+- entry: km
+  label: KM
+  long: Kaplan Meier
+- entry: pbo
+  label: PBO
+  long: Placebo
+- entry: who
+  label: WHO
+  long: World Health Organization
+- entry: vpc
+  label: VPC
+  long: Visual Predictive Check
+- entry: auc
+  label: AUCROC
+  long: area under the curve

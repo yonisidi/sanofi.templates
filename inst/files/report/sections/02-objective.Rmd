@@ -1,0 +1,8 @@
+# Objective and Overview of Analysis
+
+Describe the objective of the analysis 
+
+Example:
+
+- Perform a graphical exploration of the `r gls('er')` and the `r gls('dur')` of ...
+- Model the survival probability of crossing retreatment threshold during followup time period for each treatment period.

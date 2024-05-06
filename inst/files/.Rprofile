@@ -10,22 +10,22 @@ if (interactive() && Sys.getenv("TERM_PROGRAM") == "vscode") {
   # obtain list of packages in renv library currently
   project <- renv:::renv_project_resolve(NULL)
   lib_packages <- names(unclass(renv:::renv_diagnostics_packages_library(project))$Packages)
-
+  
   # detect whether key packages are already installed
   # was: !require("languageserver")
-  if (!"languageserver" %in% lib_packages) {
+  if ("languageserver" %in% lib_packages) {
     message("installing languageserver package")
     renv::install("languageserver")
   }
 
   if (!"httpgd" %in% lib_packages) {
     message("installing httpgd package")
-    renv::install("nx10/httpgd")
+    renv::install("httpgd")
   }
 
   if (!"vscDebugger" %in% lib_packages) {
     message("installation vscDebugger package")
-    renv::install("ManuelHentschel/vscDebugger@v0.4.3")
+    renv::install("ManuelHentschel/vscDebugger")
   }
 
   # use the new httpgd plotting device

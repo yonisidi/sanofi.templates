@@ -1,0 +1,114 @@
+--- 
+title: "Title of Report"
+author: "Author Name"
+date: "`r Sys.Date()`"
+output: 
+  officedown::rdocx_document:
+    mapstyles:
+      Normal: ['First Paragraph']
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = '../../../deliv/reports/NEW_REPORT',output_file = 'NEW_REPORT.docx') })
+description: "This is a Modeling and Simulation Report Template"
+bibliography: ../../../deliv/reports/NEW_REPORT/references.bib
+biblio-style: apalike
+link-citations: yes
+glossary: 
+  file: '../../../deliv/reports/NEW_REPORT/glossary.yml'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(  
+  echo = FALSE, 
+  message = FALSE, 
+  warning = FALSE,
+  out.width='95%',
+  fig.pos = 'H', 
+  fig.align = 'center', 
+  out.extra = "",
+  fig.path = '../../../deliv/figures/NEW_REPORT/',
+  dpi = 300, 
+  fig.cap = TRUE)
+```
+
+
+```{r, include=FALSE}
+library(officedown)
+library(officer)
+library(knitr)
+library(magrittr)
+library(glossaries)
+```
+
+
+```{r, include=FALSE}
+fp <- fp_par(
+  text.align = "center", 
+  padding.bottom = 20, padding.top = 120, 
+  border.bottom = fp_border())
+
+ft <- fp_text(shading.color='#EFEFEF', bold = TRUE)
+```
+
+
+\newpage
+
+```{r, eval = FALSE}
+withr::with_dir(rprojroot::find_root('_targets.R'),{
+  targets::tar_load()
+})
+```
+
+<!-- This document presents most of the features of the package `r ftext("officedown", ft)`. -->
+<!-- `r fp` -->
+
+## Table of content
+
+<!---BLOCK_TOC--->
+
+## List of figures
+
+<!---BLOCK_TOC{seq_id: 'fig'}--->
+
+## List of tables
+
+<!---BLOCK_TOC{seq_id: 'tab'}--->
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/00-glossary.Rmd'}
+```
+
+\newpage
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/01-introduction.Rmd'}
+```
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/02-objective.Rmd'}
+```
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/03-data_sources.Rmd'}
+```
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/04-data_plan.Rmd'}
+```
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/05-methods.Rmd'}
+```
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/06-results.Rmd'}
+```
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/07-discussions.Rmd'}
+```
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/08-conclusions.Rmd'}
+```
+
+```{r child='../../../deliv/reports/NEW_REPORT/sections/09-references.Rmd'}
+```
+
+```{r definitions, echo=FALSE, cache=TRUE, cache.rebuild = TRUE}
+definition_tbl <- used_entries('definition')
+```
+
+```{r acronyms, echo=FALSE, cache=TRUE, cache.rebuild = TRUE}
+acronym_tbl <- used_entries('acronym')
+```

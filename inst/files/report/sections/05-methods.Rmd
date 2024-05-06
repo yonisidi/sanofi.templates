@@ -1,0 +1,13 @@
+# Analysis Methods
+
+## Computation Software
+
+Exploratory analysis, modeling and reporting was conducted using `r R.version.string`. Model were developed on a `r Sys.info()[['sysname']]` `r Sys.info()[['release']]` operating system on a `r Sys.info()[['machine']]`. All code was mainted using version control system Git.
+
+## Methods for Analysis
+
+### Exploratory Analysis
+
+### Model Development
+
+### Model Estimation

@@ -1,0 +1,9 @@
+# Introduction
+
+## Background
+
+Information about the disease 
+
+## `r gls('drug')`
+
+Information about `r gls('drug')`

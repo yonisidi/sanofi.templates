@@ -1,0 +1,7 @@
+# Results
+
+Figure \@ref(fig:test) is an example of referencing an image.
+
+```{r test, fig.cap = 'Test Figure', out.width='80%'}
+plot(1:10, 1:10)
+```
