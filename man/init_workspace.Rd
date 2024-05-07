@@ -12,5 +12,5 @@ init_workspace(path = ".", ...)
 \item{\dots}{arguments passed to \link[renv:init]{init}}
 }
 \description{
-Initialize workspace for a sage project folder
+Initialize workspace for a Sanofi project folder
 }

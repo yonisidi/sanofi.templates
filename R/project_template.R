@@ -31,7 +31,7 @@ project_template <- function(path, ...) {
 }
 
 #' @title Initialize Workspace
-#' @description Initialize workspace for a sage project folder
+#' @description Initialize workspace for a Sanofi project folder
 #' @param path Path where to copy files into
 #' @param \dots arguments passed to [init][renv::init]
 #' @rdname init_workspace
