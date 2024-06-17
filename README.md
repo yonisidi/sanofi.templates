@@ -32,13 +32,13 @@ Usage guide:
 
 ## Initializing a new slide deck
 
-In `RStudio` from the menu bar
+### Powerpoint
 
-1. Choose File from Menu Bar
-1. Select "New File"
-1. Select "R Markdown ..."
-1. Select "From Template"
-1. Scroll down to "Sanofi Themed Presentation"
-    - Fill in the name of the slide deck file
-    - Choose location to save on disk
-1. Click `OK`
+```r
+use_slides(deck_name = 'Name of Deck', path = 'Path to place qmd file')
+```
+
+Usage guide: 
+
+* 'Name of Deck' will become the directory name of the slides
+* 'Path to place qmd file' should be the repo's root directory that contains the `deliv` and `script` directories
