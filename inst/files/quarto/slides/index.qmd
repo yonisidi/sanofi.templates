@@ -1,0 +1,61 @@
+---
+title: "Slides Title"
+author: "Author Name"
+date: today
+output-file: "slides.pptx"
+---
+
+```{r}
+library(knitr)
+```
+
+# Background Section
+
+## Goal of the Analysis
+
+# Results Section
+
+## Create Figure
+
+::: columns
+::: {.column width="50%"}
+
+- @fig-test_create reference
+- Bullet 2
+
+:::
+
+::: {.column width="50%"}
+```{r fig-test_create}
+#| fig-cap: 'Generating figure in chunk'
+plot(1:10, 1:10)
+```
+:::
+:::
+
+
+## Read Figure
+
+::: columns
+::: {.column width="50%"}
+
+- @fig-test_read reference
+- Bullet 2
+
+:::
+
+::: {.column width="50%"}
+```{r fig-test_read}
+#| fig-cap: 'Reading from local storage'
+knitr::include_graphics(sanofi.templates::get_file('xkcd', 'image'))
+```
+:::
+:::
+
+
+# Conclusions Section
+
+## Conclusions 
+
+## Bibliography
+
