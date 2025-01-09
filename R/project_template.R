@@ -1,7 +1,6 @@
 #' @importFrom yaml read_yaml
 #' @importFrom withr with_dir
 #' @importFrom renv init
-#' @importFrom gert git_clone git_add git_commit git_push
 project_template <- function(path, ...) {
 
   # ensure path exists
@@ -33,10 +32,13 @@ project_template <- function(path, ...) {
   dots <- list(...)
   
   if(nzchar(dots$gh)){
-    gert::git_clone(url = dots$gh)
-    gert::git_add('.')
-    gert::git_commit(message = "init commit")
-    gert::git_push()
+
+  system('git init')
+  system('git add .')
+  system('git commit -m "init commit"')
+  system(sprintf('git remote add origin %s', dots$gh))
+  system('git push -u origin main')
+
   }
   
   withr::with_dir(path, renv::init())
