@@ -33,11 +33,8 @@ project_template <- function(path, ...) {
   
   if(nzchar(dots$gh)){
 
-  system('git init')
-  system('git add .')
-  system('git commit -m "init commit"')
-  system(sprintf('git remote add origin %s', dots$gh))
-  system('git push -u origin main')
+    system('git init')
+    system(sprintf('git remote add origin %s', dots$gh))
 
   }
   
