@@ -1,2 +1,6 @@
 Binding: project_template
 Title: Sanofi Workspace Template
+
+Parameter: gh
+Widget: TextInput
+Label: GitHub Repository

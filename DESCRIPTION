@@ -1,6 +1,6 @@
 Package: sanofi.templates
 Title: Sanofi Workspace Templates
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person(given = "Yoni",
            family = "Sidi",
@@ -11,8 +11,8 @@ Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Depends: R(>= 4.0.0)
-Imports: yaml, renv
+Imports: yaml, renv, gert
 Suggests: 
     testthat (>= 3.0.0)

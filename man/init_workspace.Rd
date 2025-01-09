@@ -4,12 +4,12 @@
 \alias{init_workspace}
 \title{Initialize Workspace}
 \usage{
-init_workspace(path = ".", ...)
+init_workspace(path = ".", gh = "")
 }
 \arguments{
 \item{path}{Path where to copy files into}
 
-\item{\dots}{arguments passed to \link[renv:init]{init}}
+\item{gh}{url of github repo that you want to associate with the project}
 }
 \description{
 Initialize workspace for a Sanofi project folder
