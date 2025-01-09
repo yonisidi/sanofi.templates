@@ -33,9 +33,14 @@ project_template <- function(path, ...) {
   
  if(nzchar(dots$gh)){
   withr::with_dir(path,{
+    repo_name <- tools::file_path_sans_ext(basename(dots$gh))
+    system(sprintf('echo "# %s" >> README.md', repo_name))
     system('git init')
-    system('git checkout -B main')
+    system('git add README.md')
+    system('git commit -m "first commit"')
+    system('git branch -M main')
     system(sprintf('git remote add origin %s', dots$gh))
+    system('git push -u origin main')
   })
 }
 
