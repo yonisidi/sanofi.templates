@@ -50,5 +50,5 @@ project_template <- function(path, ...) {
 #' @rdname init_workspace
 #' @export
 init_workspace <- function(path = '.', gh = ''){
-  project_template(path, ...)
+  project_template(path, gh)
 }
