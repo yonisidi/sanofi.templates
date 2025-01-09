@@ -37,12 +37,12 @@ for(this_dir in c(template_index, resources_path)){
     })
 }
 
-build_yaml(slides_script_path, slides_deliv_path, figures_deliv_path)
+slides_yaml(slides_script_path, slides_deliv_path, figures_deliv_path)
 
 }
 
 #' @importFrom yaml write_yaml verbatim_logical
-build_yaml <- function(slides_script_path, deliv_path, figure_path){
+slides_yaml <- function(slides_script_path, deliv_path, figure_path){
 
 base_list <- list(
   project = list(
@@ -65,7 +65,7 @@ base_list <- list(
       out.width = '95%',
       fig.path = sprintf("%s/", figure_path),
       fig.pos = 'H',
-      "fig-format" = 'png',
+      dev = 'png',
       fig.align = 'center',
       fig.width = 7L,
       fig.height = 7L,

@@ -1,0 +1,105 @@
+--- 
+title: "Title of Report"
+author: "Author Name"
+date: "`r Sys.Date()`"
+description: "Modeling and Simulation Plan"
+bibliography: ../../../deliv/reports/hsCRP_simulation/references.bib
+biblio-style: apalike
+link-citations: true
+glossary: 
+  file: '../../../deliv/reports/hsCRP_simulation/glossary.yml'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(  
+  echo = FALSE, 
+  message = FALSE, 
+  warning = FALSE,
+  out.width='95%',
+  fig.pos = 'H', 
+  fig.align = 'center', 
+  out.extra = "",
+  fig.path = '../../../deliv/figures/hsCRP_simulation/',
+  dev = c('pdf', 'png'),
+  dpi = 300, 
+  fig.dim = c(7, 7))
+```
+
+
+```{r, include=FALSE}
+.libPaths(.libPaths()[1])
+
+library(flextable)
+library(knitr)
+library(magrittr)
+library(glossaries)
+library(ggplot2)
+library(ggdist)
+
+```
+
+\newpage
+
+```{r}
+withr::with_dir(rprojroot::find_root('_targets.R'),{
+  targets::tar_load(
+    c('hscrp_varying_frame',
+      'hscrp_static_frame',
+      'acr20_coef_vec',
+      'acr20_vcov_mat',
+      'hscrp_sim_trial_baseline',
+      'trial_pred',
+      'ra_lb_long',
+      'model_pred_tbl',
+      'model_fit',
+      'ra_lb_wide_cutoff',
+      'acr_power'
+      ))
+})
+```
+
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/00-glossary.Rmd'}
+```
+
+\newpage
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/01-introduction.Rmd'}
+```
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/02-objective.Rmd'}
+```
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/02a-study_design.Rmd'}
+```
+
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/03-data_sources.Rmd'}
+```
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/04-data_plan.Rmd'}
+```
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/05-methods.Rmd'}
+```
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/06-results.Rmd'}
+```
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/07-discussions.Rmd', eval = FALSE}
+```
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/08-conclusions.Rmd', eval = FALSE}
+```
+
+```{r child='../../../deliv/reports/hsCRP_simulation/sections/09-references.Rmd'}
+```
+
+
+```{r definitions, echo=FALSE, cache=TRUE, cache.rebuild = TRUE}
+definition_tbl <- used_entries('definition')
+```
+
+```{r acronyms, echo=FALSE, cache=TRUE, cache.rebuild = TRUE}
+acronym_tbl <- used_entries('acronym')
+```
