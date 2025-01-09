@@ -31,14 +31,14 @@ project_template <- function(path, ...) {
   
   dots <- list(...)
   
-  if(nzchar(dots$gh)){
-
+ if(nzchar(dots$gh)){
+  withr::with_dir(path,{
     system('git init')
     system('git checkout -B main')
     system(sprintf('git remote add origin %s', dots$gh))
+  })
+}
 
-  }
-  
   withr::with_dir(path, renv::init())
 
 }
