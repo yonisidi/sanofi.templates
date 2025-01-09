@@ -34,6 +34,7 @@ project_template <- function(path, ...) {
   if(nzchar(dots$gh)){
 
     system('git init')
+    system('git checkout -B main')
     system(sprintf('git remote add origin %s', dots$gh))
 
   }
